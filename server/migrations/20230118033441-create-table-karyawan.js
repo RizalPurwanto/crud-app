@@ -13,7 +13,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       id_jabatan: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'table_jabatans',
+          key: 'id'
+        },
       },
       age: {
         type: Sequelize.INTEGER

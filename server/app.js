@@ -5,12 +5,12 @@ const cors = require("cors"); //cors untuk localstorage
 const express = require("express");
 const app = express();
 const router = require('./routes')
-const port = process.env.PORT || 3000; 
+const port = process.env.PORT || 3033; 
 
 const errorHandler = require("./middlewares/errorHandler");
 
 
-app.use(cors()); //memfilter akses. jika dalam kurung kosong, semua bisa masuk
+app.use(cors()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -24,17 +24,15 @@ app.use('/', router)
 app.use(errorHandler);
 
 
-app.listen(port, () => {
-  console.log(`Listening to port ${port}!`);
-});
+// app.listen(port, () => {
+//   console.log(`Listening to port ${port}!`);
+// });
 
 
 
 const server = app.listen(port, () => console.log(`Listening on ${port}`));
 
 
-// httpServer.listen(5000, ()=> {
-//   console.log(`Socket Listening to port 5000`)
-// })
 
-module.exports = app
+
+// module.exports = app

@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      table_jabatan.belongsTo(models.table_department, {foreignKey:'IdDepartment'})
+      table_jabatan.belongsTo(models.table_department, {foreignKey:'id_department'})
 
-      table_jabatan.hasMany(models.table_karyawan)
+      table_jabatan.hasMany(models.table_karyawan, {foreignKey: 'id_jabatan'})
     }
   }
   table_jabatan.init({

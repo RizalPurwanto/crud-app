@@ -10,7 +10,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_department: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'table_departments',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       nama_jabatan: {
         type: Sequelize.STRING
