@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "nama_department": "Business Development"
+  },
+  { "id": 2, "nama_department": "Finance" },
+  { "id": 3, "nama_department": "General Affairs" },
+  { "id": 4, "nama_department": "IT Development" }
+]
